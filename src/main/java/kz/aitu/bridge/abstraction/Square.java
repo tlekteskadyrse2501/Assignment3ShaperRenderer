@@ -4,8 +4,8 @@ import kz.aitu.bridge.implementor.Renderer;
 import kz.aitu.bridge.exception.InvalidShapeParameterException;
 
 public final class Square extends Shape {
-    private final double x;
-    private final double y;
+    private double x;
+    private double y;
     private final double sideLength;
 
     public Square(double x, double y, double sideLength, Renderer renderer) {
@@ -17,6 +17,11 @@ public final class Square extends Shape {
         this.y = y;
         this.sideLength = sideLength;
     }
+    
+    public double getX() { return x; }
+    public double getY() { return y; }
+    public void setX(double x) { this.x = x; }
+    public void setY(double y) { this.y = y; }    public double getSideLength() { return sideLength; }
 
     @Override
     public void draw() {

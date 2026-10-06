@@ -1,6 +1,6 @@
 package kz.aitu.bridge.implementor;
 
-abstract class AbstractRenderer implements Renderer {
+public abstract class AbstractRenderer implements Renderer {
     private final String rendererType;
 
     protected AbstractRenderer(String rendererType) {
@@ -12,4 +12,9 @@ abstract class AbstractRenderer implements Renderer {
     }
 
     protected abstract String getFormatDescription();
+
+    @Override
+    public String getType() {
+        return rendererType;
+    }
 }

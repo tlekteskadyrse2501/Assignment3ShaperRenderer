@@ -17,7 +17,7 @@ public abstract class Shape {
         this.renderer = renderer;
     }
 
-    protected final Renderer getRenderer() {
+    public final Renderer getRenderer() {
         return renderer;
     }
 
